@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% load bootstrap %}
+{% block title %}Certas Tarefas{% endblock %}
+	
+{% block main %}
+	<h1>Editar Tarefa</h1>
+	<form method="POST">
+		{% csrf_token %}
+		{{ form|bootstrap}}
+		<button class="btn btn-primary" type="submit">Concluir Edição</button>	
+	</form>
+{% endblock %}

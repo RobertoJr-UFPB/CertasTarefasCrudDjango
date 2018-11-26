@@ -1,0 +1,14 @@
+body{
+	background-color: SteelBlue;
+}
+
+
+h1,h2,h3,h4{
+	text-align: center;
+	color:white;
+}
+home, #cabecalho{
+	text-align: center;
+	margin-top: 170px;
+}
+

@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% load bootstrap %}
+
+{% block title %}Certas Tarefas{% endblock %}
+	
+{% block main %}
+	<div id = "cabecalho">
+		<h1>Certas Tarefas CRUD</h1>
+		<h4>Aqui é possivel adicionar, remover, atualizar e editar tarefas do seu dia dia. </h4>
+		<input style="margin-top: 30px"type="submit" class="btn btn-primary btn-lg" value="Start" onclick="window.location='/list';" />
+	</div>
+{% endblock %}

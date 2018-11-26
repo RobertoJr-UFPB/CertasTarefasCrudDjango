@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+{% load bootstrap %}
+
+{% block title %}Certas Tarefas{% endblock %}
+	
+{% block main %}
+	<h1 class="home">Minhas Tarefas</h1>
+	<div  class="text-center" style="width: auto; padding-top:50px" id="tarefas">
+		<ul class="list-group">
+			{% for tarefa in Tarefa %}	
+				<li class="list-group-item">
+					<div class="row">
+						<div class="col-6 col-2">
+							<a href="{% url 'atualizaTarefa' tarefa.id %}">{{tarefa.titulo}}</a>
+						</div>
+						<div class="col-4">
+							<a class="btn btn-danger btn-lg" href="{% url 'deletaTarefa' tarefa.id %}" >Deletar</a>
+						</div>
+					</div>
+				
+				</li> 
+			{% endfor %}
+		</ul>
+	<input style="margin-top: 30px;" class="btn btn-primary btn-lg " type="submit" value="Nova Tarefa" onclick="window.location='/new';" />
+	</div>
+
+{% endblock %}

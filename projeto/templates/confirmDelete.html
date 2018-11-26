@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% load bootstrap %}
+
+{% block title %}Certas Tarefas{% endblock %}
+	
+{% block main %}
+	<div class="text-center">
+		<h3>Realmente deseja deletar a tarefa de título, {{tarefa.titulo}} ?</h3>
+		<div class="row">
+			<div class="col-6">
+				<form method="POST">
+					{% csrf_token %}
+					<button  style="margin-top: 30px"class="btn btn-danger" type="submit">Sim</button>	
+				</form>
+			</div>
+			<div class="col-6">
+				<button style="margin-top: 30px"style="margin-top: 30px" class="btn btn-primary"  onclick="window.location='/list';">Não</button>	
+			</div>
+	</div>
+{% endblock %}
